@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;600&display=swap');
+
+//* Colors *//
+
+//#### Primary
+
+$strongCyan: hsl(171, 66%, 44%);
+$lightBlue: hsl(233, 100%, 69%);
+
+//#### Neutral
+
+$darkGrayishBlue: hsl(210, 10%, 33%);
+$grayishBlue: hsl(201, 11%, 66%);
+
+//* Global *//
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-image: url(../images/bg-header-desktop.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    font-size: 18px;
+    font-family: 'Bai Jamjuree', sans-serif;
+    font-weight: 400;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: $darkGrayishBlue;
+    font-weight: 600;
+}
+
+p {
+    color: $grayishBlue;
+}
+
+//* Layout *//
+.container {
+    padding-top: 100px;
+}
+
+#bg-hero {
+    text-align: center;
+    & h1 {
+        font-size: 2.5rem;
+    }
+    & p {
+        font-size: 1rem;
+        padding: 15px 200px 25px 200px;
+    }
+}
+
+button {
+    font-size: 1rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 25px;
+    padding: 10px 15px;
+    margin: 0 5px;
+    &.btn-ios {
+        background-color: $strongCyan;
+        color: white;
+        &:hover {
+            opacity: 0.7;
+        }
+    }
+    &.btn-mac {
+        background-color: $lightBlue;
+        color: white;
+        &:hover {
+            opacity: 0.7;
+        }
+    }
+}
+
+#bg-snippets {
+    text-align: center;
+    & h2 {
+        font-size: 2rem;
+    }
+    & p {
+        font-size: 1rem;
+        padding: 15px 200px 25px 200px;
+    }
+}
+
+.bg-computer-left {
+    position: relative;
+    left: -50px;
+    width: 980px;
+    height: auto;
+}
+
+.bg-computer-right {
+    padding: 0 400px 0 100px;
+}
+
+#bg-anywhere {
+    text-align: center;
+    & h2 {
+        font-size: 2rem;
+    }
+    & p {
+        font-size: 1rem;
+        padding: 15px 200px 0px 200px;
+    }
+}
+
+#bg-workflow {
+    text-align: center;
+    & h2 {
+        font-size: 2rem;
+    }
+    & p {
+        font-size: 1rem;
+        padding: 15px 0;
+    }
+}
+
+#bg-clipboard {
+    text-align: center;
+    & h2 {
+        font-size: 2rem;
+    }
+    & p {
+        font-size: 1rem;
+        padding: 15px 200px 35px 200px;
+    }
+}
+
+.img-logo {
+    width: 20%;
+}
+
+.bg-footer-custom {
+    font-size: 1rem;
+    font-weight: 600;
+    & a {
+        color: $darkGrayishBlue;
+        &:hover {
+            color: $strongCyan;
+        }
+    }
+    & svg:hover path {
+        cursor: pointer;
+        fill: $strongCyan;
+    }
+}
+
+@media (max-width: 1700px) {
+    .bg-computer-left {
+        position: relative;
+        left: 0px;
+        width: 100%;
+    }
+
+    .bg-computer-right {
+        text-align: start;
+        padding: 100px 20px 0 20px;
+    }  
+}
+
+@media (max-width: 992px) {
+    body {
+        background-image: url(../images/bg-header-mobile.png);
+        background-repeat: no-repeat;
+    }
+
+    .container {
+        padding: 50px 25px;
+    }
+
+    #bg-hero {
+        & p {
+            padding: 20px;
+        }
+    }
+
+    .bg-computer-right {
+        text-align: center;
+        padding: 100px 20px 0 20px;
+    }  
+
+    #bg-snippets {
+        text-align: center;
+        & h2 {
+            font-size: 2rem;
+        }
+        & p {
+            font-size: 1rem;
+            padding: 20px;
+        }
+    }
+
+    #bg-anywhere {
+        & p {
+            padding: 20px;
+        }
+    }
+
+    #bg-clipboard {
+        & p {
+            padding: 20px;
+        }
+    }
+
+    .bg-footer-custom {
+        font-size: 1rem;
+        font-weight: 600;
+        & a {
+            color: $darkGrayishBlue;
+            &:hover {
+                color: $strongCyan;
+            }
+        }
+        & svg:hover path {
+            cursor: pointer;
+            fill: $strongCyan;
+        }
+    }
+
+    button {
+        width: 75%;
+        margin: 10px 0;
+    }
+}
+
